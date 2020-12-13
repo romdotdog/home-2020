@@ -4,9 +4,14 @@ import styled from 'styled-components';
 import { DiscordMember } from './interfaces';
 import { Info } from './Info';
 
+interface Props {
+    member: DiscordMember,
+    index: number
+}
+
 const Content = styled.div`
     @keyframes animateIn {
-          0% {
+          from {
               opacity: 0;
               transform: translateX(-20%)
           }
@@ -17,13 +22,12 @@ const Content = styled.div`
     }
     
     display: flex;
-    position: absolute;
     height: 2.7rem;
-    animation: animateIn 350ms ease-out;
+    margin-bottom: 0.8rem;
+    animation: animateIn 1000ms calc(var(--index) * 100ms) both ease;
 `;
 
 const Icon = styled.img`
-    height: 100%;
     margin-right: .7rem;
     border-radius: 50%;
 `;
@@ -34,21 +38,10 @@ const Subtext = styled.span`
     color: #9e9e9e;
 `;
 
-const Margin = styled.div`
-    @keyframes sizeIn {
-          0% {
-              height: 0
-          }
-    }
-
-    height: 3.5rem;
-    animation: sizeIn 150ms ease;
-`;
-
-const Member: React.FC<DiscordMember> = ({ id, username, avatar_url, game }) => (
+const Member: React.FC<Props> = ({ member: { id, username, avatar_url, game }, index }) => (
     <li key={id}>
-        <Content>
-            <Icon src={avatar_url} />
+        <Content style={{ "--index": index } as any} >
+            <Icon width="42" height="42" alt={`${username}'s profile picture`} src={avatar_url} />
             <Info>
                 {username}
                 {game && 
@@ -60,7 +53,6 @@ const Member: React.FC<DiscordMember> = ({ id, username, avatar_url, game }) => 
                 }
             </Info>
         </Content>
-        <Margin />
     </li>
 );
 

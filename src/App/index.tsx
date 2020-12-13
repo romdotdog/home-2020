@@ -11,7 +11,7 @@ import Avatar from './components/DiscordAPI/components/Avatar';
 import Info from './components/DiscordAPI/components/Info';
 
 const App = () => (
-    <Layout
+    <Layout 
         sidebar={(
             <Card padding="1rem .5rem">
                 <Server id="751469608615280670" name="rom's server" icon="https://cdn.discordapp.com/icons/751469608615280670/1cd9e61d3010a93a70e722e36367662c.webp?size=64" />

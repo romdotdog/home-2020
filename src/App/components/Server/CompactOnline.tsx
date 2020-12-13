@@ -23,7 +23,7 @@ const Icon = styled.i`
 `;
 
 const Text = styled.span`
-    color: #696969;
+    color: #afafaf;
     font-size: 18px;
     font-weight: 600;
 `;

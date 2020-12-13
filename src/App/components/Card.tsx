@@ -20,14 +20,14 @@ const BannerContainer = styled.div`
 const Center = styled.div`
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-62%, -50%);
+    left: 47%;
+    transform: translate(-50%, -50%);
 
     display: flex;
     align-items: center;
     
     .text-block {
-        width: 200px !important;
+        width: 250px !important;
         display: flex;
         flex-grow: 1;
         flex-direction: column;

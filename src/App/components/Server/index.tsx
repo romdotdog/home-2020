@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import CompactOnline from './CompactOnline';
 import { DiscordWidget, DiscordWidgetWithAccess } from './interfaces';
 import { Info } from './Info';
-import MembersContainer from './MembersContainer';
+import Member from './Member';
 
 interface ServerProps {
     id: string;
@@ -19,7 +19,6 @@ const Main = styled.div`
 `;
 
 const Icon = styled.img`
-    height: 100%;
     margin-right: .7rem;
 `;
 
@@ -70,6 +69,10 @@ const Join = styled.button`
     }
 `;
 
+const MembersContainer = styled.ul`
+    list-style-type: none;
+`;
+
 function openInvite(invite: string, name: string) : void {
     window.open(
         invite,
@@ -108,7 +111,7 @@ const Server: React.FC<ServerProps> = ({ id, name, icon, compact }) => {
     return (
         <>
             <Main>
-                <Icon alt={`${name} icon`} src={icon} />
+                <Icon width="50" height="50" alt={`${name} icon`} src={icon} />
                 <Info>{name}</Info>
                 <Join className={widget !== null ? "visible" : ""} onClick={widget !== null ? (() => openInvite(widget.instant_invite, name)) : undefined}>Join</Join>
             </Main>
@@ -118,7 +121,15 @@ const Server: React.FC<ServerProps> = ({ id, name, icon, compact }) => {
                     (
                         <CompactOnline count={widget.members.length} />
                     ) : (
-                        <MembersContainer members={widget.members} />
+                        <MembersContainer >
+                            {
+                                widget.members.map((m, i) => 
+                                    ( 
+                                        <Member key={m.id} member={m} index={i} /> 
+                                    )
+                                )
+                            }
+                        </MembersContainer>
                     )
                 )
             }
