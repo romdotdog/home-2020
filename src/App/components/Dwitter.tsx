@@ -28,7 +28,7 @@ const Dwitter = () => {
     }, []);
 
     return code ?
-            (<Frame title="https://dwitter.net/" src={"https://rom.dog/canvas?code=" + encodeURIComponent(code)} />)
+            (<Frame title="https://dwitter.net/" src={"https://canvas.rom.dog/?code=" + encodeURIComponent(code)} />)
             : (<></>);
 }
 
