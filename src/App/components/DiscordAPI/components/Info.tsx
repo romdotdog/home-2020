@@ -33,6 +33,17 @@ const ID = styled.span`
     font-weight: 800;
 `;
 
+const Email = styled.a`
+    text-decoration: none;
+    color: #9b958c;
+    font-size: 12px;
+    font-weight: 700;
+
+    :hover {
+        color: #4f8cc9;
+    }
+`;
+
 const Info = () => {
     const info = React.useContext(DiscordContext);
 
@@ -47,6 +58,9 @@ const Info = () => {
                         </div>
                         <div>
                             <ID>ID: {info.id}</ID>
+                        </div>
+                        <div>
+                            <Email href="https://retard.tk/">rom@retard.tk</Email>
                         </div>
                     </Container>
                 )

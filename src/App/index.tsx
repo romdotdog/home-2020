@@ -4,7 +4,6 @@ import Layout from './components/Layout';
 import Markdown from './components/Markdown';
 import Server from './components/Server';
 
-import './App.css';
 import 'react-placeholder/lib/reactPlaceholder.css';
 import Context from './components/DiscordAPI/Context';
 import Avatar from './components/DiscordAPI/components/Avatar';
