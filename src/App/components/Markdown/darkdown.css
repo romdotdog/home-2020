@@ -1408,6 +1408,6 @@ p code {
   margin-bottom: 0px;
 }
 
-[src*="rom.dog"] {
+img[src*="rom.dog"] {
     display: none;
 } /* set badge with website link to not show within website */

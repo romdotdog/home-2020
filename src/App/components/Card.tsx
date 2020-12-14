@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Dwitter from './Dwitter';
 
 interface CardProps {
     padding?: string;
@@ -15,6 +16,9 @@ export const Card = styled.div`
 
 const BannerContainer = styled.div`
     position: relative;
+    border-radius: var(--card-roundness);
+    overflow: hidden;
+    margin-bottom: 1rem;
 `
 
 const Center = styled.div`
@@ -38,15 +42,13 @@ const BannerImage = styled.div`
     background-image: url("https://cdn.glitch.com/151f6af7-81d8-4e6c-a735-3393cc91b34e%2Fpexels-jakub-novacek-924824.webp");
     height: 250px;
     opacity: .6;
-    border-radius: var(--card-roundness);
-    overflow: hidden;
-    margin-bottom: 1rem;
 `;
 
 export const Banner: React.FC = ({ children }) => {
     return (
         <BannerContainer>
             <BannerImage />
+            <Dwitter />
             <Center>
                 {children}
             </Center>
