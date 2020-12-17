@@ -22,7 +22,7 @@ const Dwitter = () => {
     const [code, setCode] = React.useState<string | null>(null);
 
     React.useEffect(() => {
-        fetch("https://proxy.rom.dog/hot_dweet").then(r => r.json()).then(r => {
+        fetch("https://edge.rom.dog/hot_dweet").then(r => r.json()).then(r => {
           setCode(htmlDecode(r.code));
         });
     }, []);

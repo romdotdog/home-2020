@@ -6,7 +6,7 @@ const Context: React.FC = ({ children }) => {
     const [ info, setInfo ] = React.useState<DiscordInfo | null>(null);
 
     React.useEffect(() => {
-        fetch("https://proxy.rom.dog/dsc.bio/rom")
+        fetch("https://edge.rom.dog/dsc.bio/rom")
             .then(r => r.json())
             .then(r => {
                 setInfo(r?.payload?.discord)

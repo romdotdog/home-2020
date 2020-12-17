@@ -17,7 +17,7 @@ const Markdown = () => {
     const [markdown, setMarkdown] = React.useState("");
 
     React.useEffect(() => {
-        fetch("https://proxy.rom.dog/gh/README/romdotdog")
+        fetch("https://edge.rom.dog/gh/README/romdotdog")
             .then(r => r.text())
             .then(r => {
                 setMarkdown(r);

@@ -95,7 +95,7 @@ const Server: React.FC<ServerProps> = ({ id, name, icon, compact }) => {
             if (cache && cache.access > now - (7200 * 1000)) { // 7200 is 2 hours, so cache is only effective for two hours.
                 newWidget = cache;
             } else {
-                newWidget = await (await fetch(`https://proxy.rom.dog/discord/${id}`)).json()
+                newWidget = await (await fetch(`https://edge.rom.dog/discord/${id}`)).json()
                 localStorage.setItem(id, 
                     JSON.stringify({
                         access: now,
