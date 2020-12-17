@@ -1,0 +1,3 @@
+# https://docs.netlify.com/routing/redirects/
+/robots.txt  https://cdn.rom.dog/robots.txt
+/humans.txt  https://cdn.rom.dog/humans.txt
