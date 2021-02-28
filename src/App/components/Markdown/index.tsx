@@ -3,7 +3,6 @@ import marked from "marked"
 import ReactPlaceholder from "react-placeholder/lib"
 import styled from "styled-components"
 
-import "./extras.css"
 import Header from "./Header"
 
 const Padding = styled.div`

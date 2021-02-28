@@ -14,3 +14,60 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+/* Markdown */
+
+.markdown-body {
+	color: #ccc;
+}
+
+.markdown-body a {
+	color: #4f8cc9;
+}
+
+.markdown-body li > p {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+/* set badge with website link to not show within website */
+img[src*="rom.dog"] {
+	display: none;
+}
+
+@media (max-width: 910px) {
+	.markdown-body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.markdown-body > a {
+		display: flex;
+		order: 2;
+		justify-content: space-evenly;
+	}
+
+	.markdown-body > a > img {
+		padding-left: 0 !important;
+	}
+
+	.markdown-body > details {
+		order: 3;
+		margin-top: 1rem !important;
+	}
+
+	img[hspace="1000"] {
+		display: none;
+	}
+}
+
+@media (max-width: 850px) {
+	.markdown-body > a {
+		display: flex;
+		justify-content: unset;
+	}
+
+	.markdown-body > a > :last-child {
+		margin-left: auto;
+	}
+}

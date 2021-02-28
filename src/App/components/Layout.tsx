@@ -8,6 +8,14 @@ const Grid = styled.div`
 	grid-template-columns: 0.5fr 1.5fr;
 	grid-template-rows: 1fr;
 	column-gap: 1rem;
+
+	@media (max-width: 1500px) {
+		grid-template-columns: 0 100%;
+
+		& > div:first-child {
+			visibility: hidden;
+		}
+	}
 `
 
 interface LayoutProps {
