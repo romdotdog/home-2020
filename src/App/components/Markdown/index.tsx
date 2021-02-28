@@ -1,28 +1,28 @@
-import * as React from "react";
-import marked from "marked";
-import ReactPlaceholder from "react-placeholder/lib";
-import styled from "styled-components";
+import * as React from "react"
+import marked from "marked"
+import ReactPlaceholder from "react-placeholder/lib"
+import styled from "styled-components"
 
-import "./extras.css";
-import Header from "./Header";
+import "./extras.css"
+import Header from "./Header"
 
 const Padding = styled.div`
 	padding: 24px;
 	max-width: 1012px;
 	margin-left: auto;
 	margin-right: auto;
-`;
+`
 
 const Markdown = () => {
-	const [markdown, setMarkdown] = React.useState("");
+	const [markdown, setMarkdown] = React.useState("")
 
 	React.useEffect(() => {
 		fetch("https://edge.rom.dog/gh/README/romdotdog")
-			.then((r) => r.text())
-			.then((r) => {
-				setMarkdown(r);
-			});
-	}, []);
+			.then(r => r.text())
+			.then(r => {
+				setMarkdown(r)
+			})
+	}, [])
 
 	return (
 		<Padding>
@@ -40,7 +40,7 @@ const Markdown = () => {
 				/>
 			</ReactPlaceholder>
 		</Padding>
-	);
-};
+	)
+}
 
-export default Markdown;
+export default Markdown

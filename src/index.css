@@ -1,16 +1,16 @@
 :root {
-    --background: #222222;
-    --card: #191919;
-    --card-border: #ffffff14;
-    --card-roundness: 5px;
+	--background: #222222;
+	--card: #191919;
+	--card-border: #ffffff14;
+	--card-roundness: 5px;
 }
 
 body {
-  margin: 0;
-  background-color: var(--background);
-  padding: 1rem 2rem;
-  color: #fff;
-  font-family: Roboto,Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	background-color: var(--background);
+	padding: 1rem 2rem;
+	color: #fff;
+	font-family: Roboto, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
